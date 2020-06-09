@@ -36,30 +36,30 @@ prepdwi_v0.0.12a	docker://khanlab/prepdwi:v0.0.12a	--no-bedpost --n_cpus 4 -w $S
 prepdwi_v0.0.12a_bedpost	docker://khanlab/prepdwi:v0.0.12a	--n_cpus 8 -w $SLURM_TMPDIR	Regular
 prepdwi_v0.0.12a_7T	docker://khanlab/prepdwi:v0.0.12a	--no-bedpost --n_cpus 4 -w $SLURM_TMPDIR --grad_coeff_file ${GRAD_COEFF_7T}	Regular
 prepdwi_v0.0.12a_bedpost_7T	docker://khanlab/prepdwi:v0.0.12a	--n_cpus 8 -w $SLURM_TMPDIR --grad_coeff_file ${GRAD_COEFF_7T}	Regular
-#prepdwi_dev	docker://khanlab/prepdwi:latest	--no-bedpost --n_cpus 8 -w $SLURM_TMPDIR	Regular
-#prepdwi_dev_p3hcp	docker://khanlab/prepdwi:latest	--no-bedpost --n_cpus 5 -w $SLURM_TMPDIR --nprobseeds 1500	5core32gb24h
-#prepdwi_dev_p3hcp_long	docker://khanlab/prepdwi:latest	--no-bedpost --n_cpus 5 -w $SLURM_TMPDIR --nprobseeds 5000	5core32gb72h
-#prepdwi_dev_fat	docker://khanlab/prepdwi:latest	--no-bedpost --n_cpus 32 -w $SLURM_TMPDIR	Fat
-#prepdwi_dev_bedpost	docker://khanlab/prepdwi:latest	--n_cpus 8 -w $SLURM_TMPDIR	Regular
-#prepdwi_dev_7T	docker://khanlab/prepdwi:latest	--no-bedpost --n_cpus 8 -w $SLURM_TMPDIR --grad_coeff_file ${GRAD_COEFF_7T}	Regular
-#prepdwi_dev_bedpost_7T	docker://khanlab/prepdwi:latest	--n_cpus 8 -w $SLURM_TMPDIR --grad_coeff_file ${GRAD_COEFF_7T}	Regular
-#diffparc-sumo_v0.0.2	docker://khanlab/diffparc-sumo:v0.0.2		4core16gb12h
-#diffparc-sumo_dev	docker://khanlab/diffparc-sumo:latest		4core16gb12h
-#diffparc-sumo_dev_BF	docker://khanlab/diffparc-sumo:latest	--skip_postproc --parcellate_type fullBF_hcpmmpVolMNI	4core64gb12h
+prepdwi_dev	docker://khanlab/prepdwi:latest	--no-bedpost --n_cpus 8 -w $SLURM_TMPDIR	Regular
+prepdwi_dev_p3hcp	docker://khanlab/prepdwi:latest	--no-bedpost --n_cpus 5 -w $SLURM_TMPDIR --nprobseeds 1500	5core32gb24h
+prepdwi_dev_p3hcp_long	docker://khanlab/prepdwi:latest	--no-bedpost --n_cpus 5 -w $SLURM_TMPDIR --nprobseeds 5000	5core32gb72h
+prepdwi_dev_fat	docker://khanlab/prepdwi:latest	--no-bedpost --n_cpus 32 -w $SLURM_TMPDIR	Fat
+prepdwi_dev_bedpost	docker://khanlab/prepdwi:latest	--n_cpus 8 -w $SLURM_TMPDIR	Regular
+prepdwi_dev_7T	docker://khanlab/prepdwi:latest	--no-bedpost --n_cpus 8 -w $SLURM_TMPDIR --grad_coeff_file ${GRAD_COEFF_7T}	Regular
+prepdwi_dev_bedpost_7T	docker://khanlab/prepdwi:latest	--n_cpus 8 -w $SLURM_TMPDIR --grad_coeff_file ${GRAD_COEFF_7T}	Regular
+diffparc-sumo_v0.0.2	docker://khanlab/diffparc-sumo:v0.0.2		4core16gb12h
+diffparc-sumo_dev	docker://khanlab/diffparc-sumo:latest		4core16gb12h
+diffparc-sumo_dev_BF	docker://khanlab/diffparc-sumo:latest	--skip_postproc --parcellate_type fullBF_hcpmmpVolMNI	4core64gb12h
 qsm_sstv_v0.1.1	shub://AlanKuurstra/qsm_sstv:v0.1.1	--SS_TV_lagrange_parameter 0.4 --mag_match_pattern *part-mag_echo* --phase_match_pattern *part-phase_echo* --keep_unnecessary_outputs	Short
 mp2rage_correction_v0.0.5	docker://khanlab/mp2rage_correction:v0.0.5		ShortSkinny
 mp2rage_correction_v0.0.4a	docker://khanlab/mp2rage_correction:v0.0.4a		ShortSkinny
-#mp2rage_correction_dev	docker://khanlab/mp2rage_correction:latest		ShortSkinny
+mp2rage_correction_dev	docker://khanlab/mp2rage_correction:latest		ShortSkinny
 mp2rage_correction_v0.0.3	shub://khanlab/mp2rage_correction:v0.0.3		ShortSkinny
 gradcorrect_v0.0.3a	docker://khanlab/gradcorrect:v0.0.3a	--grad_coeff_file ${GRAD_COEFF_7T}	4core16gb12h
 gradcorrect_v0.0.3	docker://khanlab/gradcorrect:v0.0.3	--grad_coeff_file ${GRAD_COEFF_7T}	4core16gb12h
 gradcorrect_v0.0.2	docker://khanlab/gradcorrect:v0.0.2	--grad_coeff_file ${GRAD_COEFF_7T}	4core16gb12h
-#freesurfer_v6.0.1-subfields	file:///project/6007967/akhanf/singularity/bids-apps/khanlab_freesurfer_v6.0.1-subfields.img	--license_file ${FS_LICENSE_FILE} --n_cpus 8  --skip_bids_validator --hires_mode enable	Regular
+freesurfer_v6.0.1-subfields	file:///project/6007967/akhanf/singularity/bids-apps/khanlab_freesurfer_v6.0.1-subfields.img	--license_file ${FS_LICENSE_FILE} --n_cpus 8  --skip_bids_validator --hires_mode enable	Regular
 prepT2space_v0.0.2b	shub://khanlab/prepT2space:v0.0.2b		Regular
 beast_v0.0.2	docker://khanlab/beast:v0.0.2	--BEAST_PATH ${BEAST_PATH}	ShortSkinny
-#despot1_dev	docker://khanlab/despot1:latest		ShortSkinny
+despot1_dev	docker://khanlab/despot1:latest		ShortSkinny
 mdt-bids_v0.1	docker://khanlab/mdt-bids:v0.1		ShortFat
 surfmorph_v0.1	docker://khanlab/surfmorph:v0.1		ShortSkinny
-#surfmorph_dev	docker://khanlab/surfmorph:latest		ShortSkinny
+surfmorph_dev	docker://khanlab/surfmorph:latest		ShortSkinny
 qsiprep_0.8.0RC3	docker://pennbbl/qsiprep:0.8.0RC3	-w $SLURM_TMPDIR --fs-license-file ${FS_LICENSE_FILE}	Regular
-#fmriprep_ciftify_v1.3.2-2.3.3	docker pull tigrlab/fmriprep_ciftify:v1.3.2-2.3.3		Regular
+fmriprep_ciftify_v1.3.2-2.3.3	docker://tigrlab/fmriprep_ciftify:v1.3.2-2.3.3		Regular

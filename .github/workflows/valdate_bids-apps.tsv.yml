@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: install singularity
-        run: bash .github_scripts/install_singularity.sh
+      #- name: install singularity
+      #run: bash .github_scripts/install_singularity.sh
       - name: validate bids-apps.tsv
         run: python3 validate_bids-apps.tsv.py

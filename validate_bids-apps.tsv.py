@@ -61,10 +61,10 @@ with open("bids-apps.tsv") as fd:
         #url must star with "docker://" or "shub://"
         #########
 
-        if url.startswith("docker://") or url.startswith("shub://"):
+        if url.startswith("docker://") or url.startswith("shub://") or url.startswith("file://"):
             pass
         else:
-            raise ValueError("LINE {} ERROR: url must star with 'docker://' or 'shub://' ".format(line_index))    
+            raise ValueError("LINE {} ERROR: url must star with 'docker://' or 'shub://'  or 'file://' ".format(line_index))    
         
         #########
         #docker_image_name_and_tag == name
@@ -78,10 +78,10 @@ with open("bids-apps.tsv") as fd:
         #    prepdwi_v0.0.12d_bedpost
         #########
 
-        docker_image_name_and_tag = url.split('/')[-1]
-        replaced = docker_image_name_and_tag.replace(":","_")
-        if  replaced not in name:
-            raise ValueError("LINE {} ERROR: name NOT match with docker image's name and tag".format(line_index))    
+        # docker_image_name_and_tag = url.split('/')[-1]
+        # replaced = docker_image_name_and_tag.replace(":","_")
+        # if  replaced not in name:
+        #     raise ValueError("LINE {} ERROR: name NOT match with docker image's name and tag".format(line_index))    
         
         #########
         # check if docker/singularity image exist
